@@ -124,6 +124,8 @@ body {
     margin-bottom: 30px;
     background-color: #fff;
     border-radius: 7px;
+    text-decoration: none;
+    color: black;
 }
 .card-main {
     padding: 21px 24px 35px;
