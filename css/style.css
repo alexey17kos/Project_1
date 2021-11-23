@@ -403,3 +403,155 @@ button img {
 .modal--close {
     display: none;
 }
+@media (max-width: 1240px) {
+    .container {
+        width: 95%;
+    }
+    .link-logo {
+        display: none;
+    }
+    .cards {
+        justify-content: space-around;
+    }
+    .card {
+        max-width: 40%;
+    }
+    .card-img img {
+        width: 100%;
+    }
+}
+@media (max-width: 980px) {
+    .header__buttons {
+        display: none;
+    }
+    .header .link-logo {
+        display: block;
+        order: 1;
+    }
+    .header-input {
+        width: 75%;
+    }
+    .card {
+        max-width: 384px;
+    }
+    .link-logo-foot {
+        display: none;
+    }
+    .promo-block {
+        background: #FFF1B8;
+    }
+}
+@media (max-width: 860px) {
+    .card {
+        max-width: 300px;
+    }
+}
+@media (max-width: 680px) {
+    .header-input {
+        width: 100%;
+        order: -1;
+        margin-bottom: 20px;
+    }
+    .block__header {
+        flex-wrap: wrap;
+    }
+    .header__buttons {
+        display: flex;
+    }
+    .header .link-logo {
+        order: 0;
+    }
+    .header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .section-promo {
+        display: none;
+    }
+    .section__header {
+        justify-content: center;
+    }
+    .section__header-title {
+        display: none;
+    }
+    .search-input {
+        max-width: 100%;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 75%;
+    }
+    .block__footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-block {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding: 20px 0;
+    }
+    .section__header__title {
+        display: flex;
+        margin-left: 40px;
+    }
+    .midprice {
+        display: none;
+    }
+    .dish {
+        display: none;
+    }
+    .restourant__header {
+        justify-content: center;
+    }
+    .card__desc {
+        margin-left: 70px;
+    }
+}
+@media (max-width: 480px) {
+    .header-input {
+        width: 100%;
+        order: -1;
+        margin-bottom: 20px;
+    }
+    .block__header {
+        flex-wrap: wrap;
+    }
+    .header__buttons {
+        display: flex;
+    }
+    .header .link-logo {
+        order: 0;
+    }
+    .header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .card {
+        max-width: 90%;
+    }
+    .section__header {
+        margin-bottom: 20px;
+    }
+    .navigation {
+        display: none;
+    }
+    .section-rest {
+        padding-bottom: 0;
+    }
+    .section__header__title {
+        display: flex;
+    }
+    .midprice {
+        display: none;
+    }
+    .dish {
+        display: none;
+    }
+    .restourant__header {
+        justify-content: space-around;
+    }
+}
