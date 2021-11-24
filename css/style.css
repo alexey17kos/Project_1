@@ -139,6 +139,9 @@ button img {
     text-decoration: none;
     color: black;
 }
+#index .card {
+    cursor: pointer;
+}
 .card-main {
     padding: 21px 24px 35px;
     position: relative;
@@ -403,6 +406,9 @@ button img {
 .modal--close {
     display: none;
 }
+.not--active {
+    display: none;
+}
 @media (max-width: 1240px) {
     .container {
         width: 95%;
@@ -445,6 +451,9 @@ button img {
     .card {
         max-width: 300px;
     }
+    .footer-block {
+        max-width: 455px;
+    }
 }
 @media (max-width: 680px) {
     .header-input {
@@ -486,6 +495,7 @@ button img {
     .block__footer {
         flex-wrap: wrap;
         justify-content: center;
+        flex-direction: column;
     }
     .footer-block {
         justify-content: center;
