@@ -35,6 +35,12 @@ const getToMain = () => {
     mainRest.classList.toggle('not--active');
     mainIndex.classList.toggle('not--active');
 };
+const getNewPrice = (count, price, priceBlock) => {
+    let newPrice = 0;
+    newPrice = count * price;
+    priceBlock.textContent = newPrice;
+    getFullPrice();
+};
 // вызов функций
 btnCart.addEventListener('click', modalOpen);
 btnClose.addEventListener('click', modalOpen);
@@ -51,7 +57,6 @@ cardsRest.forEach((card, index) => {
     getProductModal(nameProduct, priceProduct, index);
 });
 rows.forEach(row => {
-    let newPrice = 0;
     let priceBlock = row.querySelector('.price');
     let price = +priceBlock.textContent;
     let countBlock = row.querySelector('.count');
@@ -59,22 +64,18 @@ rows.forEach(row => {
     const btnMinus = row.querySelector('.minus');
     const btnPlus = row.querySelector('.plus');
 
-    const getNewPrice = (count, price) => {
-        newPrice = count * price;
-        priceBlock.textContent = newPrice;
-        getFullPrice();
-    };
+   
     btnMinus.addEventListener('click', () => {
         if (count > 0) {
         count--;
         countBlock.textContent = count;
-        getNewPrice(count, price);
+        getNewPrice(count, price, priceBlock);
         }
     });
     btnPlus.addEventListener('click', () => {
         count++;
         countBlock.textContent = count;
-        getNewPrice(count, price);
+        getNewPrice(count, price, priceBlock);
     });
 });
 cardsIndex.forEach(card => {
@@ -92,3 +93,4 @@ logos.forEach(logo => {
 });
 getFullPrice();
 //логеры
+
