@@ -7,18 +7,32 @@ const mainRest = document.getElementById('restourant');
 const cardsBlockIndex = mainIndex.querySelector('.cards');
 const cardsIndex = cardsBlockIndex.querySelectorAll('.card');
 const logos = document.querySelectorAll('.link-logo');
-const modalOpen = () => {
-    modal.classList.toggle('modal--close');
+let intervalId;
+const animateModal = () => {
+    let count = 99;
+    modal.classList.remove('modal--close');
+    modal.style.transform = `translateX(-100%)`;
+    const animate = () => {
+        count--;
+        modal.style.transform = `translateX(-${count}%)`;
+        if (count === 0) {
+            clearInterval(intervalId);
+        }
+    };
+    intervalId = setInterval(animate, 7);
+};
+const modalClose = () => {
+    modal.classList.add('modal--close');
 };
 const getToMain = () => {
     mainRest.classList.toggle('not--active');
     mainIndex.classList.toggle('not--active');
 };
-btnCart.addEventListener('click', modalOpen);
-btnClose.addEventListener('click', modalOpen);
+btnCart.addEventListener('click', animateModal);
+btnClose.addEventListener('click', modalClose);
 modal.addEventListener('click', (event) => {
     if (event.target == modal) {
-        modalOpen();
+        modalClose();
     }
 });
 cardsIndex.forEach(card => {

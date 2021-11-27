@@ -65,6 +65,9 @@ button img {
     font-size: 16px;
     line-height: 22px;
 }
+.button:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 .button--primary {
     background: #1890FF;
     color: #FFFFFF;
@@ -141,6 +144,9 @@ button img {
 }
 #index .card {
     cursor: pointer;
+}
+#index .card:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .card-main {
     padding: 21px 24px 35px;
